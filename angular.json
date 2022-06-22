@@ -1849,7 +1849,6 @@
       }
     }
   },
-  "defaultProject": "todo-testing",
   "cli": {
     "analytics": false,
     "cache": {
