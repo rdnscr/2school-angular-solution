@@ -1,6 +1,6 @@
 export class AppPage {
   navigateTo() {
-    return cy.visit('/');
+    return cy.visit('http://localhost:4200/');
   }
 
   getParagraph() {
