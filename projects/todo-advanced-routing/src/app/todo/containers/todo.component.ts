@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
 import { TodoService } from '../services/todo.service';
@@ -7,17 +7,13 @@ import { TodoService } from '../services/todo.service';
     selector: 'todo-page',
     templateUrl: './todo.component.html',
 })
-export class TodoComponent implements OnInit {
+export class TodoComponent  {
     constructor(private todoService: TodoService, private snackBar: MatSnackBar) {
 
     }
 
     public get todos(): TodoItem[] {
         return this.todoService.todos;
-    }
-
-    public ngOnInit() {
-        // this.todoService.load();
     }
 
     public onAdd(newItem: TodoItem): void {

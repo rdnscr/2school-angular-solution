@@ -5,7 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'todo-add',
-    templateUrl: './todo-add.component.html'
+    templateUrl: './todo-add.component.html',
+    styles: [ '.mat-mdc-card-content {padding-top: 10px; }']
 })
 export class TodoAddComponent {
     @Output()

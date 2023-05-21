@@ -11,7 +11,8 @@ import { TodoItem } from '../models/todo.types';
 @Component({
   selector: 'todo-add',
   templateUrl: './todo-add.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  styles: [ '.mat-mdc-card-content {padding-top: 10px; }']
 })
 export class TodoAddComponent {
   @Output()

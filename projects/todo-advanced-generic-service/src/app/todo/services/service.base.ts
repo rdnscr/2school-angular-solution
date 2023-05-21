@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { cloneArray } from '../../shared';
 import { Cache } from './cache';
+import { Injectable } from '@angular/core';
 
-
+@Injectable()
 export abstract class ServiceBase<TItem> {
     public items: TItem[] | undefined;
     protected cache: Cache<TItem[]>;

@@ -2,7 +2,8 @@ import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular
 
 @Component({
     selector: 'todo-add',
-    templateUrl: './todo-add.component.html'
+    templateUrl: './todo-add.component.html',
+    styles: [ '.mat-mdc-card-content {padding-top: 10px; }']
 })
 export class TodoAddComponent {
     @Output()

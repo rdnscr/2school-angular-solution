@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { TodoComponent } from '../containers/todo.component';
 import { OpenItemsDialogComponent } from '../dialog/open-items-dialog.component';
 
 @Injectable()
-export class CanDeactivateTodoService implements CanDeactivate<TodoComponent> {
+export class CanDeactivateTodoService  {
   constructor(private dialog: MatDialog) {
 
   }

@@ -16,11 +16,11 @@ export class AppPage {
   }
 
   getAddTodo() {
-    return cy.get('.mat-input-element').first();
+    return cy.get('.mat-mdc-input-element').first();
   }
 
   getAddTodoButton() {
-    return cy.get('.mat-button').first();
+    return cy.get('.mat-mdc-button').first();
   }
 
   getFirstTodoCheckbox() {

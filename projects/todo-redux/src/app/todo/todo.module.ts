@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -41,7 +41,7 @@ import { todoFeatureKey } from './reducers/todo.selector';
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule,
         MatCardModule, MatCheckboxModule, MatListModule, HttpClientModule, FlexLayoutModule, todoRoutesModule,
-        StoreModule.forFeature(todoFeatureKey, todoReducer), EffectsModule.forRoot([TodoEffects])],
+        StoreModule.forFeature(todoFeatureKey, todoReducer), EffectsModule.forFeature([TodoEffects])],
     declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent, TodoItemComponent],
     providers: [TodoService, ActionToasterService]
 })

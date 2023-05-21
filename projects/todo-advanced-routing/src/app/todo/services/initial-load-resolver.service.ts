@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 import { TodoItem } from '../../shared';
 import { TodoService } from './todo.service';
 
 @Injectable()
-export class TodosResolve implements Resolve<TodoItem[]> {
+export class TodosResolve  {
 
   constructor(private todoService: TodoService) { }
 

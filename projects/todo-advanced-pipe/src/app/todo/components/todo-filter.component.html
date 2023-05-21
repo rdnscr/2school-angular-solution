@@ -1,8 +1,12 @@
 <div>
-    <mat-card>
-        <mat-form-field>
-            <input matInput name="filter" placeholder="Filter Todo's..." [ngModel]="filter" (ngModelChange)="valueChanged($event)">
-        </mat-form-field>
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <mat-form-field fxFlex="grow">
+          <input matInput name="filter" placeholder="Filter Todo's..." [ngModel]="filter" (ngModelChange)="valueChanged($event)">
+      </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions align="end">
         <button mat-button (click)="resetFilter()">Reset Filter</button>
+      </mat-card-actions>
     </mat-card>
 </div>

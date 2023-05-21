@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { IsAdminDialogComponent } from '../dialog/is-admin-dialog.component';
 
 @Injectable()
-export class CanActivateTodoService implements CanActivate {
+export class CanActivateTodoService  {
 
     constructor(private snackbar: MatSnackBar, private dialog: MatDialog) {
     }

@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 // Shared module reexporting all external libaries required todo a todo component
 import { SharedModule } from './shared/shared.module';
+import { EffectsModule } from '@ngrx/effects';
 
 export const defaultReducers: ActionReducerMap<any> = {
 
@@ -31,8 +32,9 @@ export const defaultReducers: ActionReducerMap<any> = {
     MatSidenavModule,
     MatToolbarModule,
     StoreModule.forRoot(defaultReducers),
+    EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ logOnly: !environment.production }),
-    RouterModule.forRoot(appRoutes, { useHash: false, preloadingStrategy: NoPreloading, enableTracing: true, relativeLinkResolution: 'legacy' })],
+    RouterModule.forRoot(appRoutes, { useHash: false, preloadingStrategy: NoPreloading, enableTracing: true })],
 })
 export class AppModule {
 
