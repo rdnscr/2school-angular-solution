@@ -1,17 +1,20 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivateFn, RouterStateSnapshot } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { IsAdminDialogComponent } from '../dialog/is-admin-dialog.component';
+
+export const canActivateTodo: CanActivateFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+  return inject(CanActivateTodoService).canActivate();
+}
 
 @Injectable()
 export class CanActivateTodoService  {
 
-    constructor(private snackbar: MatSnackBar, private dialog: MatDialog) {
+    constructor(private dialog: MatDialog) {
     }
 
-    public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
+    public canActivate(): Observable<boolean> {
         const result$ = new Subject<boolean>();
 
         const dialogRef = this.dialog.open(IsAdminDialogComponent);

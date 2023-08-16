@@ -1,8 +1,8 @@
 import { RouterModule } from '@angular/router';
 import { TodoComponent } from './containers/todo.component';
-import { CanActivateTodoService } from './services/can-activate-todo.service';
-import { CanDeactivateTodoService } from './services/can-deactivate-todo.service';
-import { TodosResolve } from './services/initial-load-resolver.service';
+import { canActivateTodo } from './services/can-activate-todo.guard';
+import { canDeactivateTodo } from './services/can-deactivate-todo.guard';
+import { todoResolver } from './services/initial-load-resolver';
 
 const todoRoutes = [
     {
@@ -10,9 +10,9 @@ const todoRoutes = [
             {
                 path: '',
                 component: TodoComponent,
-                canActivate: [CanActivateTodoService],
-                canDeactivate: [CanDeactivateTodoService],
-                resolve: { todos: TodosResolve }
+                canActivate: [canActivateTodo],
+                canDeactivate: [canDeactivateTodo],
+                resolve: { todos: todoResolver }
             },
         ]
     },

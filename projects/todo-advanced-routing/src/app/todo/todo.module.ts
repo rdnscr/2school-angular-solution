@@ -17,9 +17,8 @@ import { TodoViewComponent } from './components/todo-view.component';
 import { TodoComponent } from './containers/todo.component';
 import { IsAdminDialogComponent } from './dialog/is-admin-dialog.component';
 import { OpenItemsDialogComponent } from './dialog/open-items-dialog.component';
-import { CanActivateTodoService } from './services/can-activate-todo.service';
-import { CanDeactivateTodoService } from './services/can-deactivate-todo.service';
-import { TodosResolve } from './services/initial-load-resolver.service';
+import { CanActivateTodoService } from './services/can-activate-todo.guard';
+import { CanDeactivateTodoService } from './services/can-deactivate-todo.guard';
 import { TodoService } from './services/todo.service';
 import { todoRoutesModule } from './todo.routes';
 
@@ -28,7 +27,7 @@ import { todoRoutesModule } from './todo.routes';
         MatCardModule, MatCheckboxModule, MatDialogModule, HttpClientModule, FlexLayoutModule, todoRoutesModule],
     declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent,
         TodoItemComponent, OpenItemsDialogComponent, IsAdminDialogComponent],
-    providers: [TodoService, CanActivateTodoService, CanDeactivateTodoService, TodosResolve]
+    providers: [TodoService, CanActivateTodoService, CanDeactivateTodoService]
 })
 export class TodoAdvancedRoutingModule {
 
