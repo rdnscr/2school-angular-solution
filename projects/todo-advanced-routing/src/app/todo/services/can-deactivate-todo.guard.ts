@@ -6,8 +6,7 @@ import { TodoComponent } from "../containers/todo.component";
 import { OpenItemsDialogComponent } from "../dialog/open-items-dialog.component";
 
 export const canDeactivateTodo: CanDeactivateFn<TodoComponent> = (
-  component: TodoComponent
-) => {
+  component: TodoComponent) => {
   if (component.todos.filter((item) => !item.checked).length > 0) {
     return inject(CanDeactivateTodoService).canDeactivate(inject(MatDialog));
   }
