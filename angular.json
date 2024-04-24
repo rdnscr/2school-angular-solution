@@ -11,12 +11,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-single-component",
+            "outputPath": {
+              "base": "dist/todo-single-component"
+            },
             "index": "projects/todo-single-component/src/index.html",
-            "main": "projects/todo-single-component/src/main.ts",
-            "polyfills": "projects/todo-single-component/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-single-component/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-single-component/tsconfig.app.json",
             "assets": [
               "projects/todo-single-component/src/favicon.png",
@@ -26,12 +29,11 @@
               "projects/todo-single-component/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-single-component/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -51,9 +53,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -110,12 +110,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-directive",
+            "outputPath": {
+              "base": "dist/todo-advanced-directive"
+            },
             "index": "projects/todo-advanced-directive/src/index.html",
-            "main": "projects/todo-advanced-directive/src/main.ts",
-            "polyfills": "projects/todo-advanced-directive/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-directive/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-directive/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-directive/src/favicon.png",
@@ -125,12 +128,11 @@
               "projects/todo-advanced-directive/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-directive/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -150,9 +152,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -209,12 +209,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-errorhandling",
+            "outputPath": {
+              "base": "dist/todo-advanced-errorhandling"
+            },
             "index": "projects/todo-advanced-errorhandling/src/index.html",
-            "main": "projects/todo-advanced-errorhandling/src/main.ts",
-            "polyfills": "projects/todo-advanced-errorhandling/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-errorhandling/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-errorhandling/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-errorhandling/src/favicon.png",
@@ -224,12 +227,11 @@
               "projects/todo-advanced-errorhandling/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-errorhandling/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -249,9 +251,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -308,12 +308,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-forms-reactive",
+            "outputPath": {
+              "base": "dist/todo-advanced-forms-reactive"
+            },
             "index": "projects/todo-advanced-forms-reactive/src/index.html",
-            "main": "projects/todo-advanced-forms-reactive/src/main.ts",
-            "polyfills": "projects/todo-advanced-forms-reactive/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-forms-reactive/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-forms-reactive/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-forms-reactive/src/favicon.png",
@@ -323,12 +326,11 @@
               "projects/todo-advanced-forms-reactive/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-forms-reactive/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -348,9 +350,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -407,12 +407,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-forms-template",
+            "outputPath": {
+              "base": "dist/todo-advanced-forms-template"
+            },
             "index": "projects/todo-advanced-forms-template/src/index.html",
-            "main": "projects/todo-advanced-forms-template/src/main.ts",
-            "polyfills": "projects/todo-advanced-forms-template/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-forms-template/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-forms-template/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-forms-template/src/favicon.png",
@@ -422,12 +425,11 @@
               "projects/todo-advanced-forms-template/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-forms-template/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -447,9 +449,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -506,12 +506,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-generic-service",
+            "outputPath": {
+              "base": "dist/todo-advanced-generic-service"
+            },
             "index": "projects/todo-advanced-generic-service/src/index.html",
-            "main": "projects/todo-advanced-generic-service/src/main.ts",
-            "polyfills": "projects/todo-advanced-generic-service/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-generic-service/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-generic-service/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-generic-service/src/favicon.png",
@@ -521,12 +524,11 @@
               "projects/todo-advanced-generic-service/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-generic-service/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -546,9 +548,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -605,12 +605,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-pipe",
+            "outputPath": {
+              "base": "dist/todo-advanced-pipe"
+            },
             "index": "projects/todo-advanced-pipe/src/index.html",
-            "main": "projects/todo-advanced-pipe/src/main.ts",
-            "polyfills": "projects/todo-advanced-pipe/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-pipe/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-pipe/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-pipe/src/favicon.png",
@@ -620,12 +623,11 @@
               "projects/todo-advanced-pipe/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-pipe/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -645,9 +647,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -704,12 +704,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-routing",
+            "outputPath": {
+              "base": "dist/todo-advanced-routing"
+            },
             "index": "projects/todo-advanced-routing/src/index.html",
-            "main": "projects/todo-advanced-routing/src/main.ts",
-            "polyfills": "projects/todo-advanced-routing/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-routing/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-routing/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-routing/src/favicon.png",
@@ -719,12 +722,11 @@
               "projects/todo-advanced-routing/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-routing/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -744,9 +746,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -803,12 +803,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-templating",
+            "outputPath": {
+              "base": "dist/todo-advanced-templating"
+            },
             "index": "projects/todo-advanced-templating/src/index.html",
-            "main": "projects/todo-advanced-templating/src/main.ts",
-            "polyfills": "projects/todo-advanced-templating/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-templating/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-templating/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-templating/src/favicon.png",
@@ -818,12 +821,11 @@
               "projects/todo-advanced-templating/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-templating/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -843,9 +845,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -902,12 +902,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-advanced-translate",
+            "outputPath": {
+              "base": "dist/todo-advanced-translate"
+            },
             "index": "projects/todo-advanced-translate/src/index.html",
-            "main": "projects/todo-advanced-translate/src/main.ts",
-            "polyfills": "projects/todo-advanced-translate/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-advanced-translate/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-advanced-translate/tsconfig.app.json",
             "assets": [
               "projects/todo-advanced-translate/src/favicon.png",
@@ -917,12 +920,11 @@
               "projects/todo-advanced-translate/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-advanced-translate/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -942,9 +944,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -1001,12 +1001,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-flux",
+            "outputPath": {
+              "base": "dist/todo-flux"
+            },
             "index": "projects/todo-flux/src/index.html",
-            "main": "projects/todo-flux/src/main.ts",
-            "polyfills": "projects/todo-flux/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-flux/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-flux/tsconfig.app.json",
             "assets": [
               "projects/todo-flux/src/favicon.png",
@@ -1016,12 +1019,11 @@
               "projects/todo-flux/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-flux/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -1041,9 +1043,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -1100,12 +1100,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-mvc",
+            "outputPath": {
+              "base": "dist/todo-mvc"
+            },
             "index": "projects/todo-mvc/src/index.html",
-            "main": "projects/todo-mvc/src/main.ts",
-            "polyfills": "projects/todo-mvc/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-mvc/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-mvc/tsconfig.app.json",
             "assets": [
               "projects/todo-mvc/src/favicon.png",
@@ -1115,12 +1118,11 @@
               "projects/todo-mvc/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-mvc/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -1140,9 +1142,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -1199,12 +1199,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-mvc-s",
+            "outputPath": {
+              "base": "dist/todo-mvc-s"
+            },
             "index": "projects/todo-mvc-s/src/index.html",
-            "main": "projects/todo-mvc-s/src/main.ts",
-            "polyfills": "projects/todo-mvc-s/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-mvc-s/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-mvc-s/tsconfig.app.json",
             "assets": [
               "projects/todo-mvc-s/src/favicon.png",
@@ -1214,12 +1217,11 @@
               "projects/todo-mvc-s/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-mvc-s/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -1239,9 +1241,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -1298,12 +1298,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-pwa",
+            "outputPath": {
+              "base": "dist/todo-pwa"
+            },
             "index": "projects/todo-pwa/src/index.html",
-            "main": "projects/todo-pwa/src/main.ts",
-            "polyfills": "projects/todo-pwa/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-pwa/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-pwa/tsconfig.app.json",
             "assets": [
               "projects/todo-pwa/src/favicon.png",
@@ -1314,12 +1317,11 @@
               "projects/todo-pwa/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-pwa/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -1339,10 +1341,7 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "serviceWorker": true,
-              "ngswConfigPath": "projects/todo-pwa/ngsw-config.json"
+              "serviceWorker": "projects/todo-pwa/ngsw-config.json"
             }
           }
         },
@@ -1400,12 +1399,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-onpush",
+            "outputPath": {
+              "base": "dist/todo-onpush"
+            },
             "index": "projects/todo-onpush/src/index.html",
-            "main": "projects/todo-onpush/src/main.ts",
-            "polyfills": "projects/todo-onpush/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-onpush/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-onpush/tsconfig.app.json",
             "assets": [
               "projects/todo-onpush/src/favicon.png",
@@ -1415,12 +1417,11 @@
               "projects/todo-onpush/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-onpush/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -1440,9 +1441,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -1499,12 +1498,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-redux",
+            "outputPath": {
+              "base": "dist/todo-redux"
+            },
             "index": "projects/todo-redux/src/index.html",
-            "main": "projects/todo-redux/src/main.ts",
-            "polyfills": "projects/todo-redux/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-redux/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-redux/tsconfig.app.json",
             "assets": [
               "projects/todo-redux/src/favicon.png",
@@ -1514,12 +1516,11 @@
               "projects/todo-redux/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-redux/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -1539,9 +1540,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
@@ -1598,12 +1597,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/todo-testing",
+            "outputPath": {
+              "base": "dist/todo-testing"
+            },
             "index": "projects/todo-testing/src/index.html",
-            "main": "projects/todo-testing/src/main.ts",
-            "polyfills": "projects/todo-testing/src/polyfills.ts",
+            "polyfills": [
+              "projects/todo-testing/src/polyfills.ts"
+            ],
             "tsConfig": "projects/todo-testing/tsconfig.app.json",
             "assets": [
               "projects/todo-testing/src/favicon.png",
@@ -1613,12 +1615,11 @@
               "projects/todo-testing/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/todo-testing/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -1638,9 +1639,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           }
         },
