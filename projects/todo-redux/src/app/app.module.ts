@@ -33,7 +33,7 @@ export const defaultReducers: ActionReducerMap<any> = {
     MatToolbarModule,
     StoreModule.forRoot(defaultReducers),
     EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ logOnly: !environment.production }),
+    StoreDevtoolsModule.instrument({ logOnly: !environment.production , connectInZone: true}),
     RouterModule.forRoot(appRoutes, { useHash: false, preloadingStrategy: NoPreloading, enableTracing: true })],
 })
 export class AppModule {
