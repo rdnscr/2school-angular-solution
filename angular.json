@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-single-component:build"
+            "buildTarget": "todo-single-component:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-single-component:build:production"
+              "buildTarget": "todo-single-component:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-single-component:build"
+            "buildTarget": "todo-single-component:build"
           }
         },
         "test": {
@@ -159,18 +159,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-directive:build"
+            "buildTarget": "todo-advanced-directive:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-directive:build:production"
+              "buildTarget": "todo-advanced-directive:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-directive:build"
+            "buildTarget": "todo-advanced-directive:build"
           }
         },
         "test": {
@@ -258,18 +258,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-errorhandling:build"
+            "buildTarget": "todo-advanced-errorhandling:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-errorhandling:build:production"
+              "buildTarget": "todo-advanced-errorhandling:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-errorhandling:build"
+            "buildTarget": "todo-advanced-errorhandling:build"
           }
         },
         "test": {
@@ -357,18 +357,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-forms-reactive:build"
+            "buildTarget": "todo-advanced-forms-reactive:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-forms-reactive:build:production"
+              "buildTarget": "todo-advanced-forms-reactive:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-forms-reactive:build"
+            "buildTarget": "todo-advanced-forms-reactive:build"
           }
         },
         "test": {
@@ -456,18 +456,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-forms-template:build"
+            "buildTarget": "todo-advanced-forms-template:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-forms-template:build:production"
+              "buildTarget": "todo-advanced-forms-template:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-forms-template:build"
+            "buildTarget": "todo-advanced-forms-template:build"
           }
         },
         "test": {
@@ -555,18 +555,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-generic-service:build"
+            "buildTarget": "todo-advanced-generic-service:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-generic-service:build:production"
+              "buildTarget": "todo-advanced-generic-service:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-generic-service:build"
+            "buildTarget": "todo-advanced-generic-service:build"
           }
         },
         "test": {
@@ -654,18 +654,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-pipe:build"
+            "buildTarget": "todo-advanced-pipe:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-pipe:build:production"
+              "buildTarget": "todo-advanced-pipe:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-pipe:build"
+            "buildTarget": "todo-advanced-pipe:build"
           }
         },
         "test": {
@@ -753,18 +753,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-routing:build"
+            "buildTarget": "todo-advanced-routing:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-routing:build:production"
+              "buildTarget": "todo-advanced-routing:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-routing:build"
+            "buildTarget": "todo-advanced-routing:build"
           }
         },
         "test": {
@@ -852,18 +852,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-templating:build"
+            "buildTarget": "todo-advanced-templating:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-templating:build:production"
+              "buildTarget": "todo-advanced-templating:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-templating:build"
+            "buildTarget": "todo-advanced-templating:build"
           }
         },
         "test": {
@@ -951,18 +951,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-advanced-translate:build"
+            "buildTarget": "todo-advanced-translate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-advanced-translate:build:production"
+              "buildTarget": "todo-advanced-translate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-advanced-translate:build"
+            "buildTarget": "todo-advanced-translate:build"
           }
         },
         "test": {
@@ -1050,18 +1050,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-aot:build"
+            "buildTarget": "todo-aot:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-aot:build:production"
+              "buildTarget": "todo-aot:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-aot:build"
+            "buildTarget": "todo-aot:build"
           }
         },
         "test": {
@@ -1149,18 +1149,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-flux:build"
+            "buildTarget": "todo-flux:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-flux:build:production"
+              "buildTarget": "todo-flux:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-flux:build"
+            "buildTarget": "todo-flux:build"
           }
         },
         "test": {
@@ -1248,18 +1248,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-mvc:build"
+            "buildTarget": "todo-mvc:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-mvc:build:production"
+              "buildTarget": "todo-mvc:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-mvc:build"
+            "buildTarget": "todo-mvc:build"
           }
         },
         "test": {
@@ -1347,18 +1347,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-mvc-s:build"
+            "buildTarget": "todo-mvc-s:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-mvc-s:build:production"
+              "buildTarget": "todo-mvc-s:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-mvc-s:build"
+            "buildTarget": "todo-mvc-s:build"
           }
         },
         "test": {
@@ -1448,18 +1448,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-pwa:build"
+            "buildTarget": "todo-pwa:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-pwa:build:production"
+              "buildTarget": "todo-pwa:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-pwa:build"
+            "buildTarget": "todo-pwa:build"
           }
         },
         "test": {
@@ -1548,18 +1548,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-onpush:build"
+            "buildTarget": "todo-onpush:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-onpush:build:production"
+              "buildTarget": "todo-onpush:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-onpush:build"
+            "buildTarget": "todo-onpush:build"
           }
         },
         "test": {
@@ -1647,18 +1647,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-redux:build"
+            "buildTarget": "todo-redux:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-redux:build:production"
+              "buildTarget": "todo-redux:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-redux:build"
+            "buildTarget": "todo-redux:build"
           }
         },
         "test": {
@@ -1746,18 +1746,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-testing:build"
+            "buildTarget": "todo-testing:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-testing:build:production"
+              "buildTarget": "todo-testing:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-testing:build"
+            "buildTarget": "todo-testing:build"
           }
         },
         "test": {
