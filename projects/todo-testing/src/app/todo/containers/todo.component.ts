@@ -1,12 +1,22 @@
 import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TodoService } from '../services/todo.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
+import { TodoViewComponent } from '../components/todo-view.component';
+import { TodoAddComponent } from '../components/todo-add.component';
+import { FlexModule } from '@ngbracket/ngx-layout/flex';
 
 @Component({
     selector: 'todo-page',
     templateUrl: './todo.component.html',
+    standalone: true,
+    imports: [
+        FlexModule,
+        TodoAddComponent,
+        TodoViewComponent,
+        MatSnackBarModule,
+    ],
 })
 export class TodoComponent implements OnInit {
     constructor(private todoService: TodoService, private snackBar: MatSnackBar) {

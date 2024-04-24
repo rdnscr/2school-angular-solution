@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'todo-confirm-dialog',
-    templateUrl: './confirm-dialog.component.html'
+    templateUrl: './confirm-dialog.component.html',
+    standalone: true,
+    imports: [MatDialogModule, MatButtonModule]
 })
 export class ConfirmDialogComponent {
 

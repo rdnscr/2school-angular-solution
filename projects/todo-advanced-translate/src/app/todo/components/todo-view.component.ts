@@ -1,9 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TodoItem } from '../../shared';
+import { TranslateModule } from '@ngx-translate/core';
+import { TodoListComponent } from './todo-list.component';
+import { FlexModule } from '@ngbracket/ngx-layout/flex';
 
 @Component({
     selector: 'todo-view',
-    templateUrl: './todo-view.component.html'
+    templateUrl: './todo-view.component.html',
+    standalone: true,
+    imports: [FlexModule, TodoListComponent, TranslateModule]
 })
 export class TodoViewComponent {
   @Input()

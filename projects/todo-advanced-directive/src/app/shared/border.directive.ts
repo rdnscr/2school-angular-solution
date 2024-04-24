@@ -1,7 +1,10 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 // Could be done with a regular directive with an ElementRef
-@Directive({ selector: '[todoBorder]' })
+@Directive({
+    selector: '[todoBorder]',
+    standalone: true
+})
 export class BorderDirective {
     constructor(
         private templateRef: TemplateRef<any>,

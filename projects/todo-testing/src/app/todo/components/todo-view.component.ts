@@ -2,10 +2,14 @@ import { Component, Input, OnInit, Inject, Output, EventEmitter } from '@angular
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
+import { TodoListComponent } from './todo-list.component';
+import { FlexModule } from '@ngbracket/ngx-layout/flex';
 
 @Component({
     selector: 'todo-view',
-    templateUrl: './todo-view.component.html'
+    templateUrl: './todo-view.component.html',
+    standalone: true,
+    imports: [FlexModule, TodoListComponent]
 })
 export class TodoViewComponent {
   @Input()

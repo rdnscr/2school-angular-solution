@@ -3,10 +3,20 @@ import { Subject } from 'rxjs';
 import { FluxAction, FluxActionTypes } from '../services/actions.type';
 import { FluxStore } from '../services/flux-store.service';
 import { fluxDispatcherToken } from '../services/flux.configuration';
+import { TodoViewComponent } from '../components/todo-view.component';
+import { TodoAddComponent } from '../components/todo-add.component';
+import { FlexModule } from '@ngbracket/ngx-layout/flex';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'todo-page',
     templateUrl: './todo.component.html',
+    standalone: true,
+    imports: [
+        FlexModule,
+        TodoAddComponent,
+        TodoViewComponent,
+    ],
 })
 export class TodoComponent implements OnInit {
     constructor(public store: FluxStore, @Inject(fluxDispatcherToken) private dispatcher: Subject<FluxAction>) {

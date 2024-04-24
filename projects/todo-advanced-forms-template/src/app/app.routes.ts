@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
-  { path: '', redirectTo: 'todo', pathMatch: 'full' },
+  { path: "", redirectTo: "todo", pathMatch: "full" },
   {
-    path: 'todo',
-    loadChildren: () => import('./todo/todo.module').then(m => m.TodoAdvancedFormsTemplateModule),
-    data: { title: 'Todo Template Forms' }
-  }
+    path: "todo",
+    loadChildren: () => import("./todo/todo.routes"),
+    data: { title: "Todo Template Forms" },
+  },
 ];

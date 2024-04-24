@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TodoItem } from '../models/todo.types';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class TodoService {
     constructor(private http: HttpClient) {
 

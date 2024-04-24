@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { cloneArray, TodoItem } from '../../shared';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class TodoService {
     public todos: TodoItem[] = [];
     private readonly url = 'assets/mock-data/todos.json';

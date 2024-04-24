@@ -3,10 +3,17 @@ import { Subject } from 'rxjs';
 import { TodoItem } from '../../shared';
 import { FluxAction, FluxActionTypes } from '../services/actions.type';
 import { fluxDispatcherToken } from '../services/flux.configuration';
+import { MatButtonModule } from '@angular/material/button';
+import { TodoItemComponent } from './todo-item.component';
+import { NgFor, NgIf } from '@angular/common';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
     selector: 'todo-list',
-    templateUrl: './todo-list.component.html'
+    templateUrl: './todo-list.component.html',
+    standalone: true,
+    imports: [MatCardModule, MatListModule, NgFor, TodoItemComponent, NgIf, MatButtonModule]
 })
 export class TodoListComponent {
     @Input()

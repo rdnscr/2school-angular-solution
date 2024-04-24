@@ -8,16 +8,16 @@ import { Injectable } from '@angular/core';
 export abstract class ServiceBase<TItem> {
     public items: TItem[] | undefined;
     protected cache: Cache<TItem[]>;
-    private orig: TItem[] | undefined;
+    private origCache: Cache<TItem[]>;
 
     constructor(protected http: HttpClient, protected cacheKey: string) {
-        this.cache = new Cache<TItem[]>(cacheKey);
+      this.cache = new Cache<TItem[]>(cacheKey);
+      this.origCache = new Cache<TItem[]>(`${cacheKey}_orig`);
     }
 
     public load(forceReload: boolean = false): Observable<TItem[]> {
         if (this.cache.hasCache() && !forceReload) {
             this.items = this.cache.readCache();
-            this.orig = this.cache.readCache();
 
             return new Observable((observer) => {
                 observer.next(this.cache.readCache());
@@ -29,9 +29,9 @@ export abstract class ServiceBase<TItem> {
 
         obs.subscribe((res) => {
             this.cache.writeCache(res);
+            this.origCache.writeCache(res);
             console.log('cache written');
             this.items = res;
-            this.orig = res;
             return res as TItem[];
         });
 
@@ -45,8 +45,9 @@ export abstract class ServiceBase<TItem> {
     }
 
     public reset(): void {
-      if(this.orig) {
-        this.items = cloneArray(this.orig);
+      const orig = this.origCache.readCache();
+      if(orig) {
+        this.items = cloneArray(orig);
         this.persist();
       }
     }

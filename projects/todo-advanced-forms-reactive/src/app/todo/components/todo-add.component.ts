@@ -1,12 +1,20 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
+import { MatButtonModule } from '@angular/material/button';
+import { NgIf } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { FlexModule } from '@ngbracket/ngx-layout/flex';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
     selector: 'todo-add',
     templateUrl: './todo-add.component.html',
-    styles: [ '.mat-mdc-card-content {padding-top: 10px; }']
+    styles: ['.mat-mdc-card-content {padding-top: 10px; }'],
+    standalone: true,
+    imports: [MatCardModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, FlexModule, MatInputModule, NgIf, MatButtonModule]
 })
 export class TodoAddComponent {
     @Output()

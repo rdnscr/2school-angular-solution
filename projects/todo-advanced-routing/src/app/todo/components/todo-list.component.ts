@@ -1,10 +1,17 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
+import { MatButtonModule } from '@angular/material/button';
+import { TodoItemComponent } from './todo-item.component';
+import { NgFor, NgIf } from '@angular/common';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
     selector: 'todo-list',
-    templateUrl: './todo-list.component.html'
+    templateUrl: './todo-list.component.html',
+    standalone: true,
+    imports: [MatCardModule, MatListModule, NgFor, TodoItemComponent, NgIf, MatButtonModule]
 })
 export class TodoListComponent {
     @Input()

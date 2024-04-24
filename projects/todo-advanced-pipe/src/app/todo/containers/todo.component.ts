@@ -1,11 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
 import { TodoService } from '../services/todo.service';
+import { TodoFilterPipe } from '../services/todo-filter.pipe';
+import { TodoViewComponent } from '../components/todo-view.component';
+import { TodoFilterComponent } from '../components/todo-filter.component';
+import { TodoAddComponent } from '../components/todo-add.component';
+import { FlexModule } from '@ngbracket/ngx-layout/flex';
 
 @Component({
     selector: 'todo-page',
     templateUrl: './todo.component.html',
+    standalone: true,
+    imports: [
+        FlexModule,
+        TodoAddComponent,
+        TodoFilterComponent,
+        TodoViewComponent,
+        TodoFilterPipe,
+        MatSnackBarModule,
+    ],
 })
 export class TodoComponent implements OnInit {
 

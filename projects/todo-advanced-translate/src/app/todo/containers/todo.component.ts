@@ -1,11 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { cloneArray, TodoItem } from '../../shared';
 import { TodoService } from '../services/todo.service';
+import { TodoViewComponent } from '../components/todo-view.component';
+import { TodoAddComponent } from '../components/todo-add.component';
+import { LangSwitchComponent } from '../components/lang-switch.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { FlexModule } from '@ngbracket/ngx-layout/flex';
 
 @Component({
     selector: 'todo-page',
     templateUrl: './todo.component.html',
+    standalone: true,
+    imports: [
+        FlexModule,
+        TranslateModule,
+        LangSwitchComponent,
+        TodoAddComponent,
+        TodoViewComponent,
+        MatSnackBarModule,
+    ],
 })
 export class TodoComponent implements OnInit {
     public param: any;

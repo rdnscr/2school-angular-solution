@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
-import { SharedModule } from './../shared/shared.module';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -20,8 +20,7 @@ import { todoRoutesModule } from './todo.routes';
 
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule, MatListModule,
-        MatCardModule, MatCheckboxModule, HttpClientModule, FlexLayoutModule, todoRoutesModule, SharedModule],
-    declarations: [TodoAddComponent, TodoComponent, TodoViewComponent, TodoListComponent, TodoItemComponent],
+    MatCardModule, MatCheckboxModule, HttpClientModule, FlexLayoutModule, todoRoutesModule, TodoAddComponent, TodoComponent, TodoViewComponent, TodoListComponent, TodoItemComponent],
     providers: [TodoService]
 })
 export class TodoAdvancedDirectiveModule {
