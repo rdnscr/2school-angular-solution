@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
 import { PushService } from '../services/push.service';
 import { TodoService } from '../services/todo.service';

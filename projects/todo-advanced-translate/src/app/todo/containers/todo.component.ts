@@ -22,7 +22,7 @@ import { FlexModule } from '@ngbracket/ngx-layout/flex';
     ],
 })
 export class TodoComponent implements OnInit {
-    public param: any;
+    public param: object;
 
     public todos: TodoItem[] | undefined;
     private orig: TodoItem[] | undefined;

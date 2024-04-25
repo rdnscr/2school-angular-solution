@@ -1,10 +1,10 @@
 import { Injectable, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRouteSnapshot, CanActivateFn, RouterStateSnapshot } from '@angular/router';
+import { CanActivateFn } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { IsAdminDialogComponent } from '../dialog/is-admin-dialog.component';
 
-export const canActivateTodo: CanActivateFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+export const canActivateTodo: CanActivateFn = () => {
   return inject(CanActivateTodoService).canActivate();
 }
 

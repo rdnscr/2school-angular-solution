@@ -1,7 +1,6 @@
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FlexModule } from '@ngbracket/ngx-layout/flex';

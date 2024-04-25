@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../services/todo.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';

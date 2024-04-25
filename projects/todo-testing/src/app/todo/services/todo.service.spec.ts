@@ -37,6 +37,7 @@ describe('Http-TodoService (mockBackend)', () => {
             // Action
             sut.load();
 
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const mockReq = httpMock.expectOne((sut as any).url);
 
             // Assert

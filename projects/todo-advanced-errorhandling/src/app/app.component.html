@@ -3,16 +3,16 @@
     <div class="badge">
       <div fxFlex="none" class="header-logo" [class.lt-md]="'header-logo-sm'">
         <a href="http://www.2bit.ch/" tabindex="-1">
-          <img src="/assets/img/2bit.svg" class="logo" [class.lt-md]="'logo-sm'" />
+          <img src="/assets/img/2bit.svg" class="logo" [class.lt-md]="'logo-sm'" alt="2BIT Logo"/>
         </a>
       </div>
-      <img class="cover" src="/assets/img/sidenav/badge.png" />
+      <img class="cover" src="/assets/img/sidenav/badge.png" alt="Sidenav image"/>
       <mat-icon (click)="sidenav.close()" class="black hide-icon">arrow_back</mat-icon>
     </div>
     <div class="menu" fxLayout="column" fxLayoutAlign="start stretch">
       <mat-nav-list fxFlex="nogrow">
         <!-- This is required since side-nave in mode over is per default focusing first focusable element, which is a behavior we don't want -->
-        <a mat-list-item style="height: 0px" routerLink="home"></a>
+        <a mat-list-item style="height: 0px" routerLink="home">Home</a>
         <a *ngFor="let navItem of navItems" mat-list-item [routerLink]="[navItem.path]" (click)="sidenav.close()" routerLinkActive="mat-list-item-focus">
           {{navItem.data?.title}}
         </a>

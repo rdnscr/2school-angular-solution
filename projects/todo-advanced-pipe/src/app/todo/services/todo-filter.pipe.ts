@@ -7,7 +7,7 @@ import { TodoItem } from '../../shared';
 })
 export class TodoFilterPipe implements PipeTransform {
 
-  public transform(items: TodoItem[], filterStrings: string | undefined): any {
+  public transform(items: TodoItem[], filterStrings: string | undefined): TodoItem[] {
     if (!filterStrings) {
       return items;
     }

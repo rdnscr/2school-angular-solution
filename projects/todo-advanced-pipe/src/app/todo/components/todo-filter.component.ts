@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Subject } from 'rxjs';
-import { tap, debounceTime } from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';

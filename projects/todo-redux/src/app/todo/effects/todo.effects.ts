@@ -26,7 +26,7 @@ import { TodoItem } from '../models/todo.types';
 
 @Injectable()
 export class TodoEffects {
-  load$: Observable<Action | {}> = createEffect(() =>
+  load$: Observable<Action | object> = createEffect(() =>
     this.actions$.pipe(
       ofType(TodoActions.load),
       switchMap(() => {

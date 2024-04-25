@@ -7,7 +7,7 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 })
 export class BorderDirective {
     constructor(
-        private templateRef: TemplateRef<any>,
+        private templateRef: TemplateRef<Element>,
         private viewContainer: ViewContainerRef) { }
 
     @Input()

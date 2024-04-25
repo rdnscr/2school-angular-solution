@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 export const merge = (orig: any, props: any) => {
     return Object.assign({}, orig, props);
 };

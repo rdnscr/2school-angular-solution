@@ -9,7 +9,7 @@ import { filter } from 'rxjs/operators';
 export class UpdateService {
   constructor(updates: SwUpdate, snackbar: MatSnackBar) {
     updates.versionUpdates.pipe(
-      filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY')).subscribe(event => {
+      filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY')).subscribe(() => {
         const ref = snackbar.open('new version available', 'reload');
         ref.onAction().subscribe(() => {
           document.location.reload(); // trigger the refresh

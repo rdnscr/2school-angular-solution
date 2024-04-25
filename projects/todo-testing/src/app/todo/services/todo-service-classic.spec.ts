@@ -13,6 +13,7 @@ const makeTodoData = () => [
 describe('Http-HeroService (mockBackend)', () => {
     it('load heroes from fake', () => {
         // Arrange
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const fakeHttp = { get: () => { } } as any;
         let observerFake: Observer<TodoItem[]> | undefined;
         const obs = new Observable((observer) => {

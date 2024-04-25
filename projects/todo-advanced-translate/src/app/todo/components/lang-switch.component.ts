@@ -3,7 +3,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { MatOptionModule } from '@angular/material/core';
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MatSelectModule } from '@angular/material/select';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { FlexModule } from '@ngbracket/ngx-layout/flex';
@@ -22,7 +22,7 @@ export class LangSwitchComponent {
         translate.setDefaultLang(this.myLang);
     }
 
-    public onLangChanged(event: any) {
+    public onLangChanged(event: MatSelectChange) {
         console.log('lang changed ' + event.value);
         this.translate.use(event.value);
     }

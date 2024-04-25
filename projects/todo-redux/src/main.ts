@@ -13,7 +13,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-export const defaultReducers: ActionReducerMap<any> = {
+export const defaultReducers: ActionReducerMap<object> = {
 
 };
 

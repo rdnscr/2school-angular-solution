@@ -14,7 +14,6 @@ import { AsyncPipe } from '@angular/common';
 import { TodoViewComponent } from '../components/todo-view.component';
 import { TodoAddComponent } from '../components/todo-add.component';
 import { FlexModule } from '@ngbracket/ngx-layout/flex';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'todo-page',

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { merge } from './helpers.util';
 
 class ObjectPathCopyService {
@@ -23,7 +24,7 @@ class ObjectPathCopyService {
         return result;
     }
 
-    private mergeBy(toCopy: any, props: {}): any {
+    private mergeBy(toCopy: any, props: object): any {
         let result: any;
         if (toCopy) {
             result = merge(toCopy, props);
@@ -43,4 +44,4 @@ class ObjectPathCopyService {
     }
 }
 
-export let pathCopyHelper = new ObjectPathCopyService();
+export const pathCopyHelper = new ObjectPathCopyService();

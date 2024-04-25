@@ -2,11 +2,12 @@ import { todoReducer, initialState } from './todo.reducer';
 import { TodoActions } from '../actions';
 import { TodoItem } from '../models/todo.types';
 import { TodoState } from './todo.state';
+import { Action } from '@ngrx/store';
 
 describe('TodoReducer', () => {
   describe('undefined action', () => {
     it('should return the default state', () => {
-      const action = {} as any;
+      const action = {} as Action;
 
       const result = todoReducer(undefined, action);
       expect(result.todos).toEqual([]);

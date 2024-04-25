@@ -8,7 +8,7 @@ export class ErrorHandlerService extends ErrorHandler {
     super();
   }
 
-  public handleError(exception: any) {
+  public handleError(exception: Error) {
     if (exception.message && exception.message.length > 0) {
       this.logger.log(exception.message);
     } else {

@@ -1,6 +1,4 @@
-import { Component, Input, OnInit, Inject, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TodoItem } from '../../shared';
 import { TodoListComponent } from './todo-list.component';
 import { FlexModule } from '@ngbracket/ngx-layout/flex';

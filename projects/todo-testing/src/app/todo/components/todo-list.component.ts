@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, Inject, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
 import { MatButtonModule } from '@angular/material/button';

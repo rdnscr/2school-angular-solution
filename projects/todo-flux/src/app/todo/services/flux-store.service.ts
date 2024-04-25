@@ -29,7 +29,7 @@ export class FluxStore {
                     break;
                 case FluxActionTypes.Add:
                     this.todos?.push({
-                        id: Math.max.apply(Math, (this.todos.map((arrayItem) => arrayItem.id))) + 1,
+                        id: Math.max(...(this.todos.map((arrayItem) => arrayItem.id))) + 1,
                         description: action.description ?? '',
                         checked: false,
                         lastModified: new Date()

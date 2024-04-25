@@ -31,12 +31,13 @@ export class PushService {
     // Acquire push subscription and afterwards react onto pushes
     this.swPush
       .requestSubscription({ serverPublicKey: 'BGypBH3LCt-tzAV1zcjdpXaWcdBNm8RGpV-bRDR5ihE81BseWw-zp8XYuQ88RfK3Pc72ytmDKiGInMizhOlZ3YU' })
-      .then((subscription: PushSubscription) => {
+      .then(() => {
         this.acquiredSubscription();
       });
   }
 
-  acquiredSubscription(): any {
+  acquiredSubscription(): void {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     this.swPush.messages.subscribe((message: any) => {
       this.lastNotifcation = message.notification as NotificationOptions;
     });
