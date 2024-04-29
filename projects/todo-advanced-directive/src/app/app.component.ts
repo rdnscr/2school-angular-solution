@@ -6,6 +6,7 @@ import { NgFor } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
+import { MatListModule } from '@angular/material/list';
 
 /*
  * App Component
@@ -16,7 +17,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     standalone: true,
-    imports: [MatSidenavModule, MatIconModule, MatSidenavModule, FlexLayoutModule, RouterLink, NgFor, RouterLinkActive, MatToolbarModule, RouterOutlet]
+    imports: [MatSidenavModule, MatIconModule, MatListModule, MatSidenavModule, FlexLayoutModule, RouterLink, NgFor, RouterLinkActive, MatToolbarModule, RouterOutlet]
 })
 export class AppComponent {
   public name = '2BIT Angular Demos';
