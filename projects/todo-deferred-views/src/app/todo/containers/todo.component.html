@@ -1,0 +1,16 @@
+<div class="content" fxLayout="column" fxLayoutGap="25px">
+    <h1>Todo example</h1>
+    <h2>MVC+S architecture</h2>
+
+    @defer (when todos && todos.length > 0) {
+      <todo-add (add)="onAdd($event)"></todo-add>
+      <todo-view [items]="todos" (resetItem)="onReset()"></todo-view>
+    } @placeholder {
+      <img alt="loading" style="filter: blur(2px);" src="/assets/img/placeholder.png" />
+    } @loading (after 200ms; minimum 1s) {
+      <!-- switch the after to 0ms to show loading block after placholder is removed since rendering in 0ms is impossible ;) -->
+      <p>Loading Todos</p>
+    } @error {
+      <p>Failed to load Todos</p>
+    }
+</div>

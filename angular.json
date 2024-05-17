@@ -1290,6 +1290,105 @@
         }
       }
     },
+    "todo-deferred-views": {
+      "root": "projects/todo-deferred-views/",
+      "sourceRoot": "projects/todo-deferred-views/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": {
+              "base": "dist/todo-deferred-views"
+            },
+            "index": "projects/todo-deferred-views/src/index.html",
+            "polyfills": [
+              "projects/todo-deferred-views/src/polyfills.ts"
+            ],
+            "tsConfig": "projects/todo-deferred-views/tsconfig.app.json",
+            "assets": [
+              "projects/todo-deferred-views/src/favicon.png",
+              "projects/todo-deferred-views/src/assets"
+            ],
+            "styles": [
+              "projects/todo-deferred-views/src/styles.scss"
+            ],
+            "scripts": [],
+            "extractLicenses": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true,
+            "browser": "projects/todo-deferred-views/src/main.ts"
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/todo-deferred-views/src/environments/environment.ts",
+                  "with": "projects/todo-deferred-views/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "todo-deferred-views:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "todo-deferred-views:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "todo-deferred-views:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/todo-deferred-views/src/test.ts",
+            "polyfills": "projects/todo-deferred-views/src/polyfills.ts",
+            "tsConfig": "projects/todo-deferred-views/tsconfig.spec.json",
+            "karmaConfig": "projects/todo-deferred-views/karma.conf.js",
+            "styles": [
+              "projects/todo-deferred-views/src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/todo-deferred-views/src/favicon.png",
+              "projects/todo-deferred-views/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/todo-deferred-views//**/*.ts",
+              "projects/todo-deferred-views//**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "todo-pwa": {
       "root": "projects/todo-pwa/",
       "sourceRoot": "projects/todo-pwa/src",
