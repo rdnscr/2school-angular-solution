@@ -9,7 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import {} from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 if (environment.production) {
@@ -18,8 +18,9 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(BrowserModule, MatIconModule, MatSidenavModule, MatToolbarModule, HttpClientModule, MatSnackBarModule,
+        importProvidersFrom(BrowserModule, MatIconModule, MatSidenavModule, MatToolbarModule, MatSnackBarModule,
           ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })),
+        provideHttpClient(withInterceptorsFromDi()),
         provideAnimations(),
         provideRouter(appRoutes, withPreloading(NoPreloading)),
     ]

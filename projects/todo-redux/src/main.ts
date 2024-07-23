@@ -11,7 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import {} from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 export const defaultReducers: ActionReducerMap<object> = {
 
@@ -23,7 +23,8 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(BrowserModule, MatIconModule, MatSidenavModule, MatToolbarModule, HttpClientModule, StoreModule.forRoot(defaultReducers), EffectsModule.forRoot([]), StoreDevtoolsModule.instrument({ logOnly: !environment.production, connectInZone: true })),
+        importProvidersFrom(BrowserModule, MatIconModule, MatSidenavModule, MatToolbarModule, StoreModule.forRoot(defaultReducers), EffectsModule.forRoot([]), StoreDevtoolsModule.instrument({ logOnly: !environment.production, connectInZone: true })),
+        provideHttpClient(withInterceptorsFromDi()),
         provideAnimations(),
         provideRouter(appRoutes, withPreloading(NoPreloading), withDebugTracing()),
     ]
