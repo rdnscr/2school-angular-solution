@@ -22,7 +22,7 @@ const reducer = createReducer(
   })),
   on(TodoActions.add, (state, { toAdd }) => ({
     ...state,
-    todosEdit: [...state.todosEdit, toAdd]
+    todosEdit: [...state.todosEdit, {...toAdd, id: state.todosEdit.length}]
   })),
   on(TodoActions.addModified, (state, { id }) => ({
     ...state,
